@@ -12,7 +12,7 @@ const registerUser=async (usuario)=>{
 
 const obtenerDatosUsuario=async(email)=>{
     const values=[email];
-    const consulta="SELECT * FROM usuario WHERE email= $1"
+    const consulta="SELECT * FROM usuarios WHERE email= $1"
 
     const{rows:[usuario], rowCount}= await pool.query(consulta, values)
 
